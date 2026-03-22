@@ -1,4 +1,4 @@
-# @vanthdev/aiwind
+# @vanthieu97/aiwind
 
 **AIwind** — React primitives styled with **Tailwind** utility classes, with APIs shaped for **AI-assisted** app code (familiar props, strong types, `className` + `cn`). Visual language matches the vanthdev palette (warm light shell, red accent, dark navy mode).
 
@@ -7,20 +7,20 @@ Repository root: **`vanthdev-ui`** (sibling to the vanthdev site app under `Codi
 ## Install
 
 ```bash
-npm install @vanthdev/aiwind
+npm install @vanthieu97/aiwind
 ```
 
 Peer dependencies: `react`, `react-dom` (18.2+ or 19).
 
 ## Tailwind v4 (required)
 
-The package ships **no CSS file**. Consumers must run Tailwind so classes inside `@vanthdev/aiwind` are generated.
+The package ships **no CSS file**. Consumers must run Tailwind so classes inside `@vanthieu97/aiwind` are generated.
 
 In your global CSS (after `@import "tailwindcss";`), point Tailwind at the installed package:
 
 ```css
 @import "tailwindcss";
-@source "../node_modules/@vanthdev/aiwind/dist";
+@source "../node_modules/@vanthieu97/aiwind/dist";
 ```
 
 Adjust the relative path from your CSS file to `node_modules` as needed.
@@ -32,7 +32,7 @@ Ensure your app uses the same **dark mode** strategy as these components: a `.da
 ## Usage
 
 ```tsx
-import { Button, Card, CardContent, CardHeader, CardTitle, cn } from '@vanthdev/aiwind';
+import { Button, Card, CardContent, CardHeader, CardTitle, cn } from '@vanthieu97/aiwind';
 
 export function Example() {
   return (
@@ -96,7 +96,7 @@ npm run build
 In `vanthdev/package.json`:
 
 ```json
-"@vanthdev/aiwind": "file:../vanthdev-ui"
+"@vanthieu97/aiwind": "file:../vanthdev-ui"
 ```
 
 Run `npm run build` in `vanthdev-ui` whenever sources change, then reinstall or link as needed. In `vanthdev` global CSS, `@source` can target `../vanthdev-ui/dist` during local work.
@@ -105,11 +105,15 @@ Alternatively:
 
 ```bash
 cd /path/to/vanthdev-ui && npm link
-cd /path/to/vanthdev && npm link @vanthdev/aiwind
+cd /path/to/vanthdev && npm link @vanthieu97/aiwind
 ```
 
 ## Publishing
 
-1. Set `"private": false` in `package.json`.
-2. `npm run build`
-3. `npm publish` (scoped public package: `publishConfig.access` is `public`).
+`package.json` is already set up for a **public** scoped package (`publishConfig.access` is `public`, `private` is `false`).
+
+1. **Log in** (one-time per machine): `npm login` — use a token with **publish** rights if you use 2FA.
+2. **Scope must match your npm user** (or org): this package is **`@vanthieu97/aiwind`**. If `npm whoami` prints a different username, either change the `name` field to `@YOUR_NPM_USERNAME/aiwind` or create an npm **organization** and use `@org/aiwind` with membership + publish permission.
+3. **Publish**: from the repo root, run `npm publish` (or `npm publish --access public`). `prepublishOnly` runs `npm run build` automatically.
+
+If you see **404** on publish, it usually means the **scope is wrong** (not your user/org) or you are **not logged in**. If you prefer the **`@vanthdev/aiwind`** name, create the **`vanthdev`** org on [npmjs.com](https://www.npmjs.com) and update the `name` field after you have publish access.
