@@ -1,4 +1,9 @@
 node_modules
 dist
+storybook-static
 *.tsbuildinfo
 .DS_Store
+
+# Cursor — local AI rules (not tracked)
+.cursor/
+.cursorrules

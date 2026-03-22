@@ -2,7 +2,7 @@
 
 import { forwardRef, type ButtonHTMLAttributes } from 'react';
 import { cva, type VariantProps } from 'class-variance-authority';
-import { cn } from './lib/cn';
+import { cn } from '../lib/cn';
 
 const buttonVariants = cva(
   'inline-flex items-center justify-center gap-2 rounded-xl text-sm font-semibold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#c41e3a] focus-visible:ring-offset-2 focus-visible:ring-offset-[#faf8f5] disabled:pointer-events-none disabled:opacity-50 dark:focus-visible:ring-offset-[#0a0f1a]',
