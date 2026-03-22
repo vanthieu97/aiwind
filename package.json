@@ -1,6 +1,6 @@
 {
   "name": "@vanthdev/aiwind",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "React + Tailwind v4 UI primitives — typed, accessible, AI- and developer-friendly (no bundled CSS)",
   "license": "MIT",
   "private": false,
