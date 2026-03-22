@@ -3,8 +3,16 @@
   "version": "0.1.0",
   "description": "Tailwind v4–friendly React primitives, built for AI-assisted UI workflows and the vanthdev design language",
   "license": "MIT",
-  "private": true,
+  "private": false,
   "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vanthieu97/aiwind.git"
+  },
+  "bugs": {
+    "url": "https://github.com/vanthieu97/aiwind/issues"
+  },
+  "homepage": "https://github.com/vanthieu97/aiwind#readme",
   "sideEffects": false,
   "files": [
     "dist",
